@@ -1,2 +1,2 @@
 # listenbridge
-ListenBridge — Cross-border sourcing, communication, on-the-ground assistance, and coordination support for international partners in China.
+ListenBridge — Supporting international partners with China-related sourcing, communication, and on-the-ground coordination.
