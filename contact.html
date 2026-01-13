@@ -41,7 +41,7 @@
   <section>
     <h1>Contact Us</h1>
     <p class="contact-info">
-      Email: <a href="mailto:listenbridge@outlook.com">listenbridge@outlook.com</a><br>
+      Email: <a id="emailLink" href="#">Loading...</a><br>
       Address: Kunming, Yunnan, China
     </p>
     <div style="text-align:center;">
@@ -54,5 +54,25 @@
   </footer>
 
 </div>
+
+<script>
+  // ===== JS 动态生成邮箱 =====
+  // 邮箱分段，增加爬虫抓取难度
+  const part1 = "listenbridge";
+  const part2 = "outlook";
+  const part3 = "com";
+
+  // 拼接邮箱
+  const email = part1 + "@" + part2 + "." + part3;
+
+  // 设置链接 href 和显示文本
+  const link = document.getElementById("emailLink");
+  link.href = "mailto:" + email;
+  link.textContent = email;
+
+  // ===== 可选安全增强 =====
+  // 这里简单示例，未来可拆分更多段或用反转字符增加难度
+</script>
+
 </body>
 </html>
