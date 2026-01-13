@@ -21,13 +21,14 @@
 
     header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     header h1 {
       font-size: 2.6em;
       margin-bottom: 10px;
       letter-spacing: 1px;
+      color: #1f4e79;
     }
 
     header p {
@@ -54,28 +55,55 @@
       text-decoration: underline;
     }
 
-    section {
-      background: #ffffff;
-      border-radius: 8px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
     }
 
-    section h2 {
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      flex: 1 1 280px;
+      max-width: 300px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .card h2 {
       margin-top: 0;
       color: #1f4e79;
     }
 
-    ul {
+    .card ul {
       padding-left: 20px;
+    }
+
+    .btn-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1f4e79;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-link:hover {
+      text-decoration: underline;
     }
 
     .contact {
       text-align: center;
       font-size: 1.1em;
       font-weight: bold;
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
     .contact a {
@@ -94,26 +122,18 @@
       margin-top: 40px;
     }
 
-    .btn-link {
-      display: inline-block;
-      margin-top: 10px;
-      color: #1f4e79;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .btn-link:hover {
-      text-decoration: underline;
+    #logo {
+      text-align: center;
+      margin: 20px 0;
     }
   </style>
 </head>
 <body>
 
-<!-- 网站 Logo -->
-<div id="logo" style="text-align:center; margin:20px 0;">
-    <a href="index.html">
-        <img src="images/logo.png" alt="ListenBridge Logo" style="height:80px;">
-    </a>
+<div id="logo">
+  <a href="index.html">
+    <img src="images/logo.png" alt="ListenBridge Logo" style="height:80px;">
+  </a>
 </div>
 
 <div class="container">
@@ -126,7 +146,6 @@
     </p>
   </header>
 
-  <!-- 导航栏 -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -136,15 +155,40 @@
     </ul>
   </nav>
 
-  <section>
-    <h2>Who We Serve</h2>
-    <p>
-      We support international individuals, businesses, and organizations
-      who need reliable assistance related to China — whether you are overseas
-      or already on the ground.
-    </p>
-    <a class="btn-link" href="about.html">Learn more about us</a>
+  <section class="card-container">
+    <div class="card">
+      <h2>Who We Serve</h2>
+      <p>We support international individuals, businesses, and organizations who need reliable assistance related to China — whether you are overseas or on the ground.</p>
+      <a class="btn-link" href="about.html">Learn more about us</a>
+    </div>
+
+    <div class="card">
+      <h2>What We Do</h2>
+      <ul>
+        <li>Cross-border sourcing and supplier coordination</li>
+        <li>Communication support between international clients and Chinese counterparts</li>
+        <li>On-the-ground assistance for procedures, documentation, and local coordination</li>
+        <li>Guidance for visitors unfamiliar with local processes</li>
+      </ul>
+      <a class="btn-link" href="services.html">Learn more about our services</a>
+    </div>
+
+    <div class="card">
+      <h2>Why ListenBridge</h2>
+      <p>We bridge language, culture, and operational gaps with clarity, reliability, and integrity — helping international partners move forward with confidence in China.</p>
+      <a class="btn-link" href="contact.html">Contact us</a>
+    </div>
   </section>
 
-  <section>
-    <h2>What We D
+  <div class="contact">
+    Contact us: <a href="mailto:listenbridge@outlook.com">listenbridge@outlook.com</a>
+  </div>
+
+  <footer>
+    © ListenBridge. All rights reserved.
+  </footer>
+
+</div>
+
+</body>
+</html>
